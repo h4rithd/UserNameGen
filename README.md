@@ -23,12 +23,16 @@ usage: python3 usernamegen.py -f [usernames.txt]
 
 ------------------ Script from h4rithd.com ------------------
 
-
+```
+----
+```
 ┌──(h4rithd🦠kali)-[~/UserNameGen]
 └─$ cat usernames.txt 
 Angoose Garden
 James Migel
-
+```
+----
+```
 ┌──(h4rithd🦠kali)-[~/UserNameGen]
 └─$ python usernamegen.py -f usernames.txt 
 angoosegarden
