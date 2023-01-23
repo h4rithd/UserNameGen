@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import textwrap
 import argparse
-
+from tqdm import tqdm
 
 def listGen(first_name, last_name):
     user_list = []
@@ -17,7 +17,7 @@ def listGen(first_name, last_name):
     user_list.append(last_name.capitalize() + first_name.capitalize())
     user_list.append(first_name.capitalize() + "." + last_name.capitalize())
     user_list.append(first_name[0].capitalize() + "." + last_name.capitalize())
-    user_list.append(first_name.capitalize() + "." + last_name.capitalize()[0])
+    user_list.append(first_name.capitalize()+ "." + last_name.capitalize()[0])
     user_list.append(last_name.capitalize()[0] + "." + first_name.capitalize())
     user_list.append(last_name.capitalize() + "." + first_name.capitalize()[0])
 
@@ -43,9 +43,14 @@ if __name__ == "__main__":
     	epilog='------------------ Script from h4rithd.com ------------------'
     )   
     parser._action_groups.pop()
-    required = parser.add_argument_group('[!] Required arguments')  
-    required.add_argument("-f", "--file", metavar='', required=True,help="File that contain FirstName LastName.")
+    required = parser.add_argument_group('[!] Required arguments')
+    optional = parser.add_argument_group('[!] Optional arguments')
+    optional.add_argument("-f", "--file", metavar='',help="File that contain FirstName LastName.")
+    optional.add_argument("-u", "--username", metavar='',help="Single username as \"FirstName LastName\".")
+    required.add_argument("-o", "--output", metavar='', required=True, help="Output file name.") 
     args = parser.parse_args()
+
+    
     with open(args.file) as f:
         for line in f:
             full_name = line.strip().split()
