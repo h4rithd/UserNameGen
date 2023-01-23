@@ -37,7 +37,7 @@ James Migel
 ----
 ```
 ┌──(h4rithd🦠kali)-[~/UserNameGen]
-└─$ python -u "Angoose Garden" -o output.txt
+└─$ python usernamegen.py -u "Angoose Garden" -o output.txt
 angoosegarden
 gardenangoose
 angoose.garden
@@ -55,7 +55,7 @@ Garden.A
 
 
 ┌──(h4rithd🦠kali)-[~/UserNameGen]
-└─$ python -f usernames.txt -o output.txt
+└─$ python usernamegen.py -f usernames.txt -o output.txt
 angoosegarden
 gardenangoose
 angoose.garden
