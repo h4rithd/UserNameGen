@@ -19,10 +19,13 @@ usage: python3 usernamegen.py -f [usernames.txt]
 -------------------------------------------------------------
 
 [!] Required arguments:
-  -f , --file   File that contain FirstName LastName.
+  -o , --output     Output file name.
+
+[!] Optional arguments:
+  -f , --file       File that contain FirstName LastName.
+  -u , --username   Single username as "FirstName LastName".
 
 ------------------ Script from h4rithd.com ------------------
-
 ```
 ----
 ```
@@ -34,7 +37,25 @@ James Migel
 ----
 ```
 ┌──(h4rithd🦠kali)-[~/UserNameGen]
-└─$ python usernamegen.py -f usernames.txt 
+└─$ python -u "Angoose Garden" -o output.txt
+angoosegarden
+gardenangoose
+angoose.garden
+a.garden
+angoose.g
+g.angoose
+garden.a
+AngooseGarden
+GardenAngoose
+Angoose.Garden
+A.Garden
+Angoose.G
+G.Angoose
+Garden.A
+
+
+┌──(h4rithd🦠kali)-[~/UserNameGen]
+└─$ python -f usernames.txt -o output.txt
 angoosegarden
 gardenangoose
 angoose.garden
