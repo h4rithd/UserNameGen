@@ -7,12 +7,16 @@ user_list = []
 
 def listGen(first_name, last_name):
     user_list.append(first_name + last_name)
+    user_list.append(first_name)
+    user_list.append(last_name)
     user_list.append(last_name + first_name)
     user_list.append(first_name + "." + last_name)
     user_list.append(first_name[0] + "." + last_name)
     user_list.append(first_name + "." + last_name[0])
     user_list.append(last_name[0] + "." + first_name)
     user_list.append(last_name + "." + first_name[0])
+    user_list.append(first_name[0].capitalize() + last_name.capitalize())
+    user_list.append(first_name.capitalize() + last_name.capitalize()[0])
     user_list.append(first_name.capitalize() + last_name.capitalize())
     user_list.append(last_name.capitalize() + first_name.capitalize())
     user_list.append(first_name.capitalize() + "." + last_name.capitalize())
